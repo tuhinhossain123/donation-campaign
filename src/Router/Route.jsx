@@ -3,6 +3,7 @@ import MainLayout from "../Layout/MainLayout";
 import Home from "../Pages/Home/Home";
 import Donation from "../Pages/Donation/Donation";
 import Statistics from "../Pages/Statistics/Statistics";
+import SingleCategory from "../Pages/SingleCategory/SingleCategory";
 
 const router = createBrowserRouter([
     {
@@ -21,6 +22,11 @@ const router = createBrowserRouter([
             {
                 path: "/statistics",
                 element: <Statistics></Statistics>
+            },
+            {
+                path: "/categories/:id",
+                element: <SingleCategory></SingleCategory>,
+                loader: ()=> fetch('/donation.json')
             },
 
         ]

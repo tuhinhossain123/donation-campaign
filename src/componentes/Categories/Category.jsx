@@ -1,9 +1,12 @@
+import { Link } from "react-router-dom";
+
 const Category = ({ category }) => {
   const { id, img, category_name, card_bg, category_bg, text_color, title } =
     category || {};
   return (
     <div>
-      <div style={{ backgroundColor: card_bg}} className="rounded-lg">
+     <Link to={`/categories/${id}`}>
+     <div style={{ backgroundColor: card_bg}} className="rounded-lg">
         <div>
           <img className="w-full rounded-t-lg" src={img} alt="" />
         </div>
@@ -19,6 +22,8 @@ const Category = ({ category }) => {
           </h1>
         </div>
       </div>
+     
+     </Link>
     </div>
   );
 };
