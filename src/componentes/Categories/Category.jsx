@@ -13,7 +13,7 @@ const Category = ({ category }) => {
         <div className="py-5 px-4">
           <h3
             style={{ backgroundColor: category_bg, color: text_color}}
-            className="px-3 mb-3 py-1 w-24 font-semibold text-center rounded text-white"
+            className="px-3 mb-3 py-1 inline-flex font-semibold text-center rounded text-white"
           >
             {category_name}
           </h3>
