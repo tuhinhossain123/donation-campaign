@@ -1,14 +1,37 @@
+import swal from "sweetalert";
+
 const CategoryItem = ({ category }) => {
-  console.log(category);
-  const {img, text_color, title, price, description } = category || {};
+  const { id, img, text_color, title, price, description } = category || {};
+
+  const addToDonation = () => {
+    const addedDonationArray = [];
+    const addDonation = JSON.parse(localStorage.getItem("donations"));
+    if (!addDonation) {
+      addedDonationArray.push(category);
+      localStorage.setItem("donations", JSON.stringify(addedDonationArray));
+      swal("Good job!", "Donation Successfull", "success");
+    } else {
+      const isExist = addDonation.find((category) => category.id === id);
+      if (!isExist) {
+        addedDonationArray.push(...addDonation, category);
+        localStorage.setItem("donations", JSON.stringify(addedDonationArray));
+        swal("Good job!", "Donation Successfull", "success");
+      }
+      else{
+        swal("Error!", "All Ready Added", "error");
+      }
+    }
+  };
+
   return (
-    <div className="mt-10">
+    <div className="mt-10 px-4">
       <div className="container mx-auto">
-        <div className="relative bg-slate-700">
-          <img className="w-screen h-[550px] rounded-lg" src={img} alt="" />
+        <div className="relative">
+          <img className="md:w-full md:h-[450px] rounded-lg" src={img} alt="" />
         </div>
-        <div className="absolute -mt-24 pl-8">
+        <div className="absolute md:-mt-24 pl-8">
           <button
+            onClick={addToDonation}
             style={{ backgroundColor: text_color }}
             className=" text-xl px-6 py-4 rounded text-white font-semibold"
           >
