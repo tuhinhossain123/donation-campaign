@@ -4,8 +4,10 @@ import Navbar from "../componentes/Header/Navbar/Navbar";
 const MainLayout = () => {
   return (
     <div>
-      <div className="container mx-auto">
-        <Navbar></Navbar>
+      <div className="mx-auto">
+        <div className="px-10">
+          <Navbar></Navbar>
+        </div>
         <Outlet></Outlet>
       </div>
     </div>

@@ -2,7 +2,7 @@ const Banner = () => {
   return (
     <div className="h-screen mb-10">
       <div
-        className="hero cover w-full min-h-screen"
+        className="hero w-full min-h-screen"
         style={{
           backgroundImage: "url(../../../../../../public/Resources/banner.jpg)",
         }}
