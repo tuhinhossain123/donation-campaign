@@ -29,7 +29,7 @@ const CategoryItem = ({ category }) => {
         <div className="relative">
           <img className="md:w-full md:h-[450px] rounded-lg" src={img} alt="" />
         </div>
-        <div className="absolute md:-mt-24 pl-8">
+        <div className="absolute md:-mt-20 pl-7">
           <button
             onClick={addToDonation}
             style={{ backgroundColor: text_color }}
