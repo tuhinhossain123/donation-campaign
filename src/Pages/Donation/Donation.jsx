@@ -15,7 +15,7 @@ const Donation = () => {
   }, []);
 
   return (
-    <div>{" "} {noDonation ? (<p className="h-[80vh] flex justify-center items-center">
+    <div className="px-8">{" "} {noDonation ? (<p className="h-[80vh] flex justify-center items-center">
           {noDonation}
         </p>
       ) : (

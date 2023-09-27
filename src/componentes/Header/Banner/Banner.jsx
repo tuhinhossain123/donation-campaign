@@ -8,14 +8,14 @@ const Banner = ({searchItem, setSearchItem}) => {
  
 
   return (
-    <div className="h-screen mb-10">
+    <div className="h-[100vh] mb-10">
       <div
         className="hero w-full min-h-screen"
         style={{
           backgroundImage: "url(https://i.ibb.co/tYQVW1t/banner.jpg)",
         }}
       >
-        <div className="hero-overlay bg-white bg-opacity-95"></div>
+        <div className="hero-overlay bg-white bg-opacity-90"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="">
             <h1 className="mb-10 text-5xl font-bold text-[#0B0B0B]">
