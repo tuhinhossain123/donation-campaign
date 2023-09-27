@@ -15,15 +15,12 @@ const Donation = () => {
   }, []);
 
   return (
-    <div>
-      {" "}
-      {noDonation ? (
-        <p className="h-[80vh] flex justify-center items-center">
+    <div>{" "} {noDonation ? (<p className="h-[80vh] flex justify-center items-center">
           {noDonation}
         </p>
       ) : (
         <div>
-          <div className="grid md:grid-cols-2 px-5 gap-8 mt-10">
+          <div className="grid md:grid-cols-2 px-5 gap-4 mt-10">
             {isShow
               ? donations.map((donation) => (
                   <Donations key={donation.id} donation={donation}></Donations>
@@ -40,7 +37,7 @@ const Donation = () => {
           {donations.length > 4 && (
             <button
               onClick={() => setIsShow(!isShow)}
-              className="px-7 py-2 bg-[#009444] text-white rounded block mx-auto mt-4"
+              className={`px-7 py-2 bg-[#009444] text-white rounded block mx-auto mt-4 ${isShow?'hidden' : 'block'}`}
             >
               See All
             </button>

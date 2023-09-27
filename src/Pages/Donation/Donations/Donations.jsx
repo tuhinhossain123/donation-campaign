@@ -10,7 +10,7 @@ const Donations = ({ donation }) => {
     price,
   } = donation || {};
   return (
-    <div className="px-10">
+    <div className="px-">
       <div
         style={{ backgroundColor: card_bg }}
         className="rounded-lg flex gap-2"
